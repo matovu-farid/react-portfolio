@@ -11,15 +11,15 @@
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-scripts": "5.0.0",
-    "sass": "^1.49.9",
-    "style": "stylelint \"**/*.{css,scss}\" --fix",
-    "lint": "eslint . --cache --fix"
+    "sass": "^1.49.9"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "style": "stylelint \"**/*.{css,scss}\" --fix",
+    "lint": "eslint . --cache --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -46,8 +46,10 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "2.6.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
