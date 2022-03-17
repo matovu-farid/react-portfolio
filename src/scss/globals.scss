@@ -1,4 +1,6 @@
 @import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,6 +8,15 @@
 
 body {
   margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
 }
 
 .purple-btn {
@@ -14,4 +25,11 @@ body {
   font-size: $md;
   padding: 1em 2em;
   border: none;
+}
+
+.heading {
+  font-size: $xl;
+  margin: 0.5em 0;
+  color: $purple;
+  font-family: 'Playfair Display', serif;
 }
