@@ -1,6 +1,6 @@
 import About from '../../component/About';
+import AboutCards from '../../component/AboutCards';
 import Hero from '../../component/Hero';
-import Languages from '../../component/Languages';
 import Projects from '../../component/Projects';
 
 const Homepage = () => (
@@ -8,7 +8,7 @@ const Homepage = () => (
     <Hero />
     <Projects />
     <About />
-    <Languages />
+    <AboutCards />
   </div>
 );
 
