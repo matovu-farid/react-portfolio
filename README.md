@@ -1,44 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## Available Scripts
+# portfolio
 
-In the project directory, you can run:
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This is my personal portfolio that showcases some of the projects I have done.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+![screenshot](./screenshot.PNG)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Video Description
+[link](https://www.loom.com/share/1b41ba1b302940f6ba27ef9e2da04f17)
+[![gif](https://cdn.loom.com/sessions/thumbnails/1b41ba1b302940f6ba27ef9e2da04f17-with-play.gif)](https://www.loom.com/share/1b41ba1b302940f6ba27ef9e2da04f17)
+## Built With
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- Redux
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Deployment
+[The site is deployed](https://frosty-beaver-391916.netlify.app)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+To get the content of this project locally you need to run this command in your terminal:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- git clone your https://github.com/matovu-farid/portfolio.git
+- cd project portfolio
+- npm install
+- npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Authors
 
-## Learn More
+👤 **Matovu Farid Nkoba**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- GitHub: [@matovu-farid](https://github.com/matovu-farid)
+- Twitter: [@matovu100](https://twitter.com/matovu100)
+- LinkedIn: [matovu-farid](https://www.linkedin.com/in/matovu-farid-48b80257)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgments
+
+- Original design idea by [Nelson Sakwa on Behance.](https://www.behance.net/sakwadesignstudio)
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
