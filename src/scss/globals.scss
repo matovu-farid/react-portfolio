@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.purple-btn {
+  background-color: $purple;
+  color: $white;
+  font-size: $md;
+  padding: 1em 2em;
+  border: none;
+}
