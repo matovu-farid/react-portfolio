@@ -1,6 +1,6 @@
 @import '../../scss/variables.scss';
-
-.hero {
+@import '../../scss/globals.scss';
+ .hero {
   color: $purple;
   display: flex;
   font-weight: 400;
@@ -14,20 +14,6 @@
   font-size: $lg;
   display: flex;
   justify-content: flex-end;
-}
-
-.text {
-  padding: 1em 0;
-  font-size: $sm;
-  line-height: 1.5em;
-  width: 70%;
-  margin: 0;
-}
-
-.content {
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
 }
 
 .divider {

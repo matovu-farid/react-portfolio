@@ -1,4 +1,5 @@
 @import '../../scss/variables.scss';
+@import '../../scss/globals.scss';
 
 .project {
   display: flex;
@@ -28,19 +29,14 @@
   }
 }
 
+
 .button {
+  @include alignBtn;
   color: $white;
   font-size: $md;
   border: 1px solid white;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   background-color: transparent;
   padding: 0.5em 1em;
-  span {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .image {
