@@ -1,0 +1,8 @@
+@import '../../scss/variables.scss';
+@import '../../scss/globals.scss';
+
+.button {
+  @include alignBtn;
+
+  background: url('./frame.png');
+}

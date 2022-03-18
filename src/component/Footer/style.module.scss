@@ -1,0 +1,29 @@
+@import '../../scss/variables.scss';
+@import '../../scss/globals.scss';
+
+.footer {
+  background-color: $purple;
+  padding: 1.5rem 2rem;
+}
+
+.button {
+  @include alignBtn;
+
+  color: $light-blue;
+  margin: 0.5em 0;
+  font-size: $md;
+  border: none;
+  background-color: transparent;
+  padding: 0.5em 1em;
+}
+
+.links {
+  display: flex;
+  color: $white;
+  margin-bottom: 1em;
+}
+
+.links > * {
+  flex: 1;
+  font-size: $lg;
+}
