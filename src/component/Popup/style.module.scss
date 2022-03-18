@@ -6,7 +6,6 @@
   width: 100%;
   flex-direction: column;
   position: absolute;
-  flex-direction: column;
   box-shadow: 0 0 0.2rem;
 }
 
@@ -33,6 +32,7 @@
 
 .button {
   @include alignBtn;
+
   border: 1px solid;
   padding: 1em;
   font-size: $md;

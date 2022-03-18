@@ -10,14 +10,7 @@
   background-size: 60%;
   width: 100%;
   background-color: white;
-  width: 100%;
   position: absolute;
-}
-
-.menu {
-  font-size: $lg;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .divider {
@@ -35,6 +28,7 @@
   align-items: center;
   font-size: $md;
   padding: 2em 0;
+
   li {
     margin: 0.5em 0;
   }
