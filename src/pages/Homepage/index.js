@@ -1,6 +1,7 @@
 import About from '../../component/About';
 import AboutCards from '../../component/AboutCards';
 import Contact from '../../component/Contact';
+import Footer from '../../component/Footer';
 import Hero from '../../component/Hero';
 import Projects from '../../component/Projects';
 
@@ -11,6 +12,7 @@ const Homepage = () => (
     <About />
     <AboutCards />
     <Contact />
+    <Footer />
   </div>
 );
 
