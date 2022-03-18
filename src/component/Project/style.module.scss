@@ -4,6 +4,7 @@
 .project {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .footer {
@@ -26,7 +27,7 @@
   li {
     background-color: $light-blue;
     color: $purple;
-    font-size: 0.8rem;
+    font-size: $tag;
     padding: 0.5em;
   }
 }
