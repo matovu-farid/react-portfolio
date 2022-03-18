@@ -1,0 +1,74 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.purple-btn {
+  background-color: $purple;
+  color: $white;
+  font-size: $md;
+  padding: 1em 2em;
+  border: none;
+}
+
+.heading {
+  font-size: $xl;
+  margin: 1em 0 0;
+  color: $purple;
+  font-family: 'Playfair Display', serif;
+}
+
+.content {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  padding: 1em 0;
+  font-size: $sm;
+  line-height: 1.5em;
+  width: 80%;
+  margin: 0;
+}
+
+@mixin alignBtn() {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  span {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.about-item {
+  padding: 2em;
+  color: $white;
+
+  h2 {
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+
+  li {
+    list-style-type: disc;
+  }
+}

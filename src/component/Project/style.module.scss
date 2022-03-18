@@ -1,0 +1,59 @@
+@import '../../scss/variables.scss';
+@import '../../scss/globals.scss';
+
+.project {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: $purple;
+  color: $white;
+  padding: 1em;
+
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+.tags {
+  display: flex;
+  gap: 0.5em;
+
+  li {
+    background-color: $light-blue;
+    color: $purple;
+    font-size: 0.8rem;
+    padding: 0.5em;
+  }
+}
+
+.button {
+  @include alignBtn;
+
+  color: $white;
+  font-size: $md;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 0.5em 1em;
+}
+
+.image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    padding: 0;
+    margin: 0;
+  }
+}

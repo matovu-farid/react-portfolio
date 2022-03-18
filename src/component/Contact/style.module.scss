@@ -1,0 +1,15 @@
+@import '../../scss/variables.scss';
+@import '../../scss/globals.scss';
+
+.contact {
+  color: $purple;
+  display: flex;
+  font-weight: 400;
+  flex-direction: column;
+  background: url('./hero.png') no-repeat, #f9f9fa;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+}
