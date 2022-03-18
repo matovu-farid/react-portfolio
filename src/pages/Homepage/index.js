@@ -1,26 +1,22 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 import Contact from '../../component/Contact';
 import Footer from '../../component/Footer';
 import Hero from '../../component/Hero';
 import Menu from '../../component/Menu';
 import Projects from '../../component/Projects';
 import AboutSection from '../AboutSection';
-import style from './style.module.scss';
 
 const Homepage = () => {
-  const popupRef = useRef(null);
+  const [display, setDisplay] = useState('none');
   const close = () => {
-    popupRef.current.close();
+    setDisplay('none');
   };
   const showMenu = () => {
-    popupRef.current.showModal();
+    setDisplay('flex');
   };
   return (
     <div>
-      <dialog className={style.dialog} ref={popupRef}>
-        <Menu close={close} />
-      </dialog>
-
+      <Menu display={display} close={close} />
       <Hero showMenu={showMenu} />
       <Projects />
       <AboutSection />

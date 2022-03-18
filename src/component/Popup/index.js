@@ -4,11 +4,11 @@ import { GrClose } from 'react-icons/gr';
 import style from './style.module.scss';
 
 const Popup = ({
-  name, description, tags, image, close, live, github,
+  name, description, tags, image, close, display, live, github,
 }) => {
   const openInNewtab = (url) => window.open(url, '_blank');
   return (
-    <div className={`content ${style.popup}`}>
+    <div style={display} className={`content ${style.popup}`}>
 
       <div className="close">
 
@@ -38,6 +38,7 @@ const Popup = ({
 };
 
 Popup.propTypes = {
+  display: propTypes.instanceOf(Object).isRequired,
   name: propTypes.string.isRequired,
   description: propTypes.string.isRequired,
   tags: propTypes.instanceOf(Array).isRequired,

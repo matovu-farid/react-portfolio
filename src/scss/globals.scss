@@ -12,12 +12,6 @@ body {
   color: $purple;
 }
 
-dialog {
-  border: none;
-  width: 100%;
-  padding: 0;
-}
-
 a {
   text-decoration: none;
   color: $purple;
@@ -51,7 +45,6 @@ li {
   display: flex;
   flex-direction: column;
 }
-
 .close {
   display: flex;
   width: 100%;
@@ -76,13 +69,6 @@ li {
     display: flex;
     align-items: center;
   }
-}
-
-.text-button {
-  border: none;
-  background: transparent;
-  color: $purple;
-  font-size: $md;
 }
 
 .about-item {
