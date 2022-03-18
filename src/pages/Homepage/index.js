@@ -5,6 +5,7 @@ import Hero from '../../component/Hero';
 import Menu from '../../component/Menu';
 import Projects from '../../component/Projects';
 import AboutSection from '../AboutSection';
+import style from './style.module.scss';
 
 const Homepage = () => {
   const popupRef = useRef(null);
@@ -16,7 +17,7 @@ const Homepage = () => {
   };
   return (
     <div>
-      <dialog ref={popupRef}>
+      <dialog className={style.dialog} ref={popupRef}>
         <Menu close={close} />
       </dialog>
 
