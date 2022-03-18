@@ -1,12 +1,13 @@
 import { GiHamburgerMenu } from 'react-icons/gi';
+import propTypes from 'prop-types';
 import style from './style.module.scss';
 
-const Hero = () => (
-  <div className={style.hero}>
+const Hero = ({ showMenu }) => (
+  <div id="hero" className={style.hero}>
     <div className="content">
 
       <div className={style.menu}>
-        <GiHamburgerMenu />
+        <GiHamburgerMenu onClick={showMenu} />
       </div>
       <h1 className="heading">Farid Matovu</h1>
       <p className="text">
@@ -20,5 +21,9 @@ const Hero = () => (
     <div className={style.divider} />
   </div>
 );
+
+Hero.propTypes = {
+  showMenu: propTypes.func.isRequired,
+};
 
 export default Hero;

@@ -10,7 +10,7 @@ const Popup = ({
   return (
     <div style={display} className={`content ${style.popup}`}>
 
-      <div className={style.close}>
+      <div className="close">
 
         <GrClose onClick={close} />
       </div>
