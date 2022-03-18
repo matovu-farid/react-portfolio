@@ -1,8 +1,9 @@
 import { BsArrowRight } from 'react-icons/bs';
-import { useState } from 'react';
 import style from './style.module.scss';
 import Image from './laptop.png';
 import Popup from '../Popup';
+import Backdrop from '../Backdrop';
+import usePopup from '../../Hooks/usePopup';
 
 const Project = () => {
   const {
@@ -24,47 +25,51 @@ const Project = () => {
     github: '',
 
   };
-  const [display, setDisplay] = useState('none');
-  const close = () => {
-    setDisplay('none');
-  };
-  const seeMore = () => {
-    setDisplay('flex');
-  };
+  const {
+    display, modal, close, seeMore,
+  } = usePopup();
+
   return (
-    <div className={style.project}>
-      <Popup
-        display={{
-          display,
-        }}
-        link={link}
-        live={live}
-        name={name}
-        tags={tags}
-        description={description}
-        image={image}
-        close={close}
+    <>
+      <Backdrop
+        display={display}
+        mystyle={modal}
       />
-      <div className={style.image}>
+      <div className={style.project}>
 
-        <img src={image} alt="project" />
-      </div>
+        <Popup
+          display={{
+            display,
+          }}
+          link={link}
+          live={live}
+          name={name}
+          tags={tags}
+          description={description}
+          image={image}
+          close={close}
+        />
+        <div className={style.image}>
 
-      <div className={style.footer}>
-        <h3>{name}</h3>
-        <ul className={style.tags}>
-          {
+          <img src={image} alt="project" />
+        </div>
+
+        <div className={style.footer}>
+          <h3>{name}</h3>
+          <ul className={style.tags}>
+            {
             tags.map((tag) => (<li key={tag}>{tag}</li>))
           }
-        </ul>
-        <button className={style.button} onClick={seeMore} type="button">
-          <span>See this project</span>
-          <span><BsArrowRight /></span>
-        </button>
+          </ul>
+          <button className={style.button} onClick={seeMore} type="button">
+            <span>See this project</span>
+            <span><BsArrowRight /></span>
+          </button>
+
+        </div>
 
       </div>
-
-    </div>
+    </>
   );
 };
 
