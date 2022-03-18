@@ -2,7 +2,7 @@ import { TextField, Box } from '@mui/material';
 import style from './style.module.scss';
 
 const Contact = () => (
-  <div className={style.contact}>
+  <div id="contact" className={style.contact}>
     <div className="content">
       <h2 className="heading">Get started</h2>
       <p>
