@@ -12,6 +12,11 @@ body {
   color: $purple;
 }
 
+a {
+  text-decoration: none;
+  color: $purple;
+}
+
 ul {
   padding-left: 0;
 }
@@ -19,7 +24,6 @@ ul {
 li {
   list-style: none;
 }
-
 
 .purple-btn {
   background-color: $purple;
@@ -40,6 +44,12 @@ li {
   padding: 1.5em;
   display: flex;
   flex-direction: column;
+}
+.close {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 2rem;
 }
 
 .text {
