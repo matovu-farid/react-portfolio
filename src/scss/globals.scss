@@ -47,10 +47,12 @@ li {
   width: 80%;
   margin: 0;
 }
+
 @mixin alignBtn() {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
   span {
     display: flex;
     align-items: center;
@@ -65,6 +67,7 @@ li {
     font-weight: 800;
     font-size: 1.2rem;
   }
+
   li {
     list-style-type: disc;
   }

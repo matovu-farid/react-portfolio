@@ -8,11 +8,13 @@
 .footer {
   background-color: $purple;
   color: $white;
+
   h3 {
     font-size: 3rem;
   }
 }
-.tags{
+
+.tags {
   display: flex;
   gap: 0.5em;
 

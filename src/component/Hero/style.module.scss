@@ -1,12 +1,12 @@
 @import '../../scss/variables.scss';
 @import '../../scss/globals.scss';
- .hero {
+
+.hero {
   color: $purple;
   display: flex;
   font-weight: 400;
   flex-direction: column;
   background: url('./hero.png') no-repeat;
-
   width: 100%;
 }
 

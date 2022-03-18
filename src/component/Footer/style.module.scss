@@ -8,11 +8,11 @@
 
 .button {
   @include alignBtn;
+
   color: $light-blue;
   margin: 0.5em 0;
   font-size: $md;
   border: none;
-
   background-color: transparent;
   padding: 0.5em 1em;
 }

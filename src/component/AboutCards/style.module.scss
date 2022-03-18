@@ -3,5 +3,6 @@
 
 .button {
   @include alignBtn;
+
   background: url('./frame.png');
 }
