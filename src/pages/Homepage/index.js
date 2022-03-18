@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 import Contact from '../../component/Contact';
 import Footer from '../../component/Footer';
 import Hero from '../../component/Hero';
@@ -7,16 +7,19 @@ import Projects from '../../component/Projects';
 import AboutSection from '../AboutSection';
 
 const Homepage = () => {
-  const [display, setDisplay] = useState('none');
+  const popupRef = useRef(null);
   const close = () => {
-    setDisplay('none');
+    popupRef.current.close();
   };
   const showMenu = () => {
-    setDisplay('flex');
+    popupRef.current.showModal();
   };
   return (
     <div>
-      <Menu display={display} close={close} />
+      <dialog ref={popupRef}>
+        <Menu close={close} />
+      </dialog>
+
       <Hero showMenu={showMenu} />
       <Projects />
       <AboutSection />

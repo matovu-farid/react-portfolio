@@ -12,6 +12,11 @@ body {
   color: $purple;
 }
 
+dialog {
+  border: none;
+  width: 100%;
+}
+
 a {
   text-decoration: none;
   color: $purple;
@@ -69,6 +74,13 @@ li {
     display: flex;
     align-items: center;
   }
+}
+
+.text-button {
+  border: none;
+  background: transparent;
+  color: $purple;
+  font-size: $md;
 }
 
 .about-item {

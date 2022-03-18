@@ -1,12 +1,12 @@
 import { BsArrowRight } from 'react-icons/bs';
-import { useState } from 'react';
+import { useRef } from 'react';
 import style from './style.module.scss';
 import Image from './laptop.png';
 import Popup from '../Popup';
 
 const Project = () => {
   const {
-    name, description, tags, image, link, live,
+    name, description, tags, image, link, live, github,
   } = {
     name: 'Name goes here',
     description: `
@@ -24,27 +24,28 @@ const Project = () => {
     github: '',
 
   };
-  const [display, setDisplay] = useState('none');
+  const ref = useRef();
   const close = () => {
-    setDisplay('none');
+    ref.current.close();
   };
   const seeMore = () => {
-    setDisplay('flex');
+    ref.current.showModal();
   };
   return (
     <div className={style.project}>
-      <Popup
-        display={{
-          display,
-        }}
-        link={link}
-        live={live}
-        name={name}
-        tags={tags}
-        description={description}
-        image={image}
-        close={close}
-      />
+      <dialog ref={ref}>
+
+        <Popup
+          github={github}
+          link={link}
+          live={live}
+          name={name}
+          tags={tags}
+          description={description}
+          image={image}
+          close={close}
+        />
+      </dialog>
       <div className={style.image}>
 
         <img src={image} alt="project" />
