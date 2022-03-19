@@ -58,3 +58,44 @@
     margin: 0;
   }
 }
+.heading {
+  transform: rotate(-90deg);
+  display: none;
+
+  margin: 0;
+  flex: 1;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  background: url('./name.png') no-repeat right 70%;
+}
+
+.project-section {
+  flex: 2;
+}
+
+@media (min-width: $md-screen) {
+  .heading {
+    display: flex;
+  }
+  .image {
+    height: 50%;
+    object-fit: contain;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+    h3 {
+      display: none;
+    }
+  }
+}

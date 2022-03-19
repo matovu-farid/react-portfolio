@@ -25,6 +25,16 @@ li {
   list-style: none;
 }
 
+button {
+  border: none;
+}
+
+.text-button {
+  color: $purple;
+  font-size: $md;
+  background: transparent;
+}
+
 .purple-btn {
   background-color: $purple;
   color: $white;
@@ -61,6 +71,11 @@ li {
   margin: 0;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 @mixin alignBtn() {
   display: flex;
   align-items: center;
@@ -83,5 +98,14 @@ li {
 
   li {
     list-style-type: disc;
+  }
+}
+
+@media (min-width: $md-screen) {
+  .purple-btn {
+    max-width: 240px;
+  }
+  .heading {
+    font-size: 7rem;
   }
 }
