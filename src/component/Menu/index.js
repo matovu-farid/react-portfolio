@@ -1,6 +1,7 @@
 import { GrClose } from 'react-icons/gr';
 import propTypes from 'prop-types';
 import style from './style.module.scss';
+import Navlist from './Navlist';
 
 const Menu = ({ display, close }) => (
   <>
@@ -10,20 +11,7 @@ const Menu = ({ display, close }) => (
         <div className="close">
           <GrClose onClick={close} />
         </div>
-        <ul className={style.list}>
-          <li>
-            <a href="#hero">Hello</a>
-          </li>
-          <li>
-            <a href="#projects">Portfolio</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
+        <Navlist close={close} />
       </div>
       <div className={style.divider} />
     </div>

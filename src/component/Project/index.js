@@ -49,25 +49,32 @@ const Project = () => {
           image={image}
           close={close}
         />
-        <div className={style.image}>
+        <div className={style.heading}>
 
-          <img src={image} alt="project" />
-        </div>
-
-        <div className={style.footer}>
           <h3>{name}</h3>
-          <ul className={style.tags}>
-            {
+        </div>
+        <div className={style['project-section']}>
+
+          <div className={style.image}>
+
+            <img src={image} alt="project" />
+          </div>
+
+          <div className={style.footer}>
+            <h3>{name}</h3>
+            <ul className={style.tags}>
+              {
             tags.map((tag) => (<li key={tag}>{tag}</li>))
           }
-          </ul>
-          <button className={style.button} onClick={seeMore} type="button">
-            <span>See this project</span>
-            <span><BsArrowRight /></span>
-          </button>
+            </ul>
+            <button className={style.button} onClick={seeMore} type="button">
+              <span>See this project</span>
+              <span><BsArrowRight /></span>
+            </button>
+
+          </div>
 
         </div>
-
       </div>
     </>
   );
