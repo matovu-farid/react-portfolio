@@ -21,6 +21,11 @@
 }
 
 @media (min-width: $md-screen) {
+  .section {
+    background: url('./contact_top.png') no-repeat top left,
+      url('./contact_bottom.png') no-repeat bottom right, #f9f9fa;
+    background-size: 25vmin, 25vmin, cover;
+  }
   .identity {
     width: 100%;
     display: flex;
