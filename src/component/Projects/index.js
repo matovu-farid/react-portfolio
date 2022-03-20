@@ -67,6 +67,7 @@ const Projects = () => (
     <Slide>
 
       {
+
       data.map((project) => (
         <li key={project.id}>
 

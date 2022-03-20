@@ -1,24 +1,46 @@
 @import '../../../scss/variables.scss';
 
-.controls {
-  display: flex;
-  gap: 1em;
-  align-items: center;
-}
-
 .control {
   font-size: $xl;
+  display: none;
 }
 
 .slide {
   width: 100%;
   overflow: hidden;
-
-  border-radius: 2em;
+  height: 600px;
 }
 
 .list {
   display: flex;
+  flex-direction: column;
   transition: 250ms;
   margin: 0;
+}
+
+.verticle-buttons {
+  display: flex;
+
+  gap: 1em;
+}
+
+@media (min-width: $md-screen) {
+  .verticle-buttons {
+    display: none;
+  }
+  .controls {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+  .slide {
+    border-radius: 2em;
+    height: 100%;
+  }
+  .list {
+    flex-direction: row;
+  }
+  .control {
+    display: block;
+  }
 }
