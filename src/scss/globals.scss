@@ -70,7 +70,15 @@ button {
   width: 80%;
   margin: 0;
 }
-
+@mixin center-mixin() {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.center-box {
+  @include center-mixin();
+}
 .center {
   display: flex;
   justify-content: center;
@@ -86,7 +94,6 @@ button {
     align-items: center;
   }
 }
-
 
 @media (min-width: $md-screen) {
   .purple-btn {

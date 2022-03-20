@@ -1,7 +1,8 @@
 @use '../../scss/variables.scss' as *;
 
 @media (min-width: $md-screen) {
-  .section {
+  .about {
+    max-width: $max-width;
     display: flex;
     flex-direction: row-reverse;
     & > * {

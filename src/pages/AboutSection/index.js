@@ -3,9 +3,12 @@ import AboutCards from '../../component/AboutCards';
 import style from './style.module.scss';
 
 const AboutSection = () => (
-  <section className={style.section} id="about">
-    <About />
-    <AboutCards />
+  <section className="center-box">
+
+    <div className={style.about} id="about">
+      <About />
+      <AboutCards />
+    </div>
   </section>
 );
 

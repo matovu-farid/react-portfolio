@@ -1,15 +1,35 @@
 @import '../../scss/variables.scss';
 @import '../../scss/globals.scss';
 
+.section {
+  @include center-mixin();
+  background: url('./hero.png') no-repeat, #f9f9fa;
+  width: 100%;
+}
+
 .contact {
   color: $purple;
   display: flex;
   font-weight: 400;
   flex-direction: column;
-  background: url('./hero.png') no-repeat, #f9f9fa;
   width: 100%;
+  max-width: $contact-width;
 }
 
 .input {
   width: 100%;
+}
+
+@media (min-width: $md-screen) {
+  .identity {
+    width: 100%;
+    display: flex;
+    gap: 2em;
+    & > * {
+      flex: 1;
+    }
+  }
+  .messege {
+    width: 100%;
+  }
 }
