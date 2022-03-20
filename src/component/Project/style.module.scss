@@ -79,8 +79,10 @@
     display: flex;
   }
   .image {
-    height: 50%;
-    object-fit: contain;
+    height: 30%;
+    img {
+      object-fit: cover;
+    }
   }
 
   .project {
@@ -95,7 +97,7 @@
     gap: 1em;
     align-items: flex-start;
     h3 {
-      display: none;
+      font-weight: 800;
     }
   }
 }
