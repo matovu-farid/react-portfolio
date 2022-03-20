@@ -70,10 +70,15 @@ button {
   width: 80%;
   margin: 0;
 }
+
+
+@mixin column-mixin() {
+display: flex;
+flex-direction: column;
+}
 @mixin center-mixin() {
-  display: flex;
+  @include column-mixin();
   justify-content: center;
-  flex-direction: column;
   align-items: center;
 }
 .center-box {

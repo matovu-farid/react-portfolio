@@ -5,7 +5,9 @@
   display: flex;
   flex-direction: column;
   position: relative;
+ 
 }
+
 
 .footer {
   background-color: $purple;
@@ -58,26 +60,13 @@
     margin: 0;
   }
 }
-.heading {
-  transform: rotate(-90deg);
-  display: none;
-
-  margin: 0;
-  flex: 1;
-  font-size: 2rem;
-  align-items: center;
-  justify-content: center;
-  background: url('./name.png') no-repeat right 70%;
-}
 
 .project-section {
-  flex: 2;
+  width: 100%;
+  max-width: 1000px;
 }
 
 @media (min-width: $md-screen) {
-  .heading {
-    display: flex;
-  }
   .image {
     height: 30%;
     img {

@@ -8,32 +8,41 @@ const Popup = ({
 }) => {
   const openInNewtab = (url) => window.open(url, '_blank');
   return (
-    <div style={display} className={`content ${style.popup}`}>
+    <section style={display} className={style.popup}>
 
-      <div className="close">
+      <div className={`content ${style.content}`}>
 
-        <GrClose onClick={close} />
+        <div className="close">
+
+          <GrClose onClick={close} />
+        </div>
+
+        <h3 className={style.title}>{name}</h3>
+        <ul className={style.tags}>
+          {tags.map((tag) => (<li key={tag} className={style.tag}>{tag}</li>))}
+        </ul>
+        <img src={image} alt={name} />
+        <section className={style.info}>
+          <div>
+
+            <p>{description}</p>
+            <div className={style.buttons}>
+
+              <button onClick={() => openInNewtab(live)} type="button" className={style.button}>
+                <span>See Live</span>
+                <span><BsBoxArrowUpRight /></span>
+              </button>
+              <button onClick={() => openInNewtab(github)} type="button" className={style.button}>
+                <span>See Source</span>
+                <span><BsGithub /></span>
+              </button>
+            </div>
+          </div>
+
+        </section>
+
       </div>
-
-      <h3 className={style.title}>{name}</h3>
-      <ul className={style.tags}>
-        {tags.map((tag) => (<li key={tag} className={style.tag}>{tag}</li>))}
-      </ul>
-      <img src={image} alt={name} />
-      <p>{description}</p>
-      <div className={style.buttons}>
-
-        <button onClick={() => openInNewtab(live)} type="button" className={style.button}>
-          <span>See Live</span>
-          <span><BsBoxArrowUpRight /></span>
-        </button>
-        <button onClick={() => openInNewtab(github)} type="button" className={style.button}>
-          <span>See Source</span>
-          <span><BsGithub /></span>
-        </button>
-      </div>
-
-    </div>
+    </section>
   );
 };
 

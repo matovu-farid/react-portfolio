@@ -49,10 +49,6 @@ const Project = () => {
           image={image}
           close={close}
         />
-        <div className={style.heading}>
-
-          <h3>{name}</h3>
-        </div>
         <div className={style['project-section']}>
 
           <div className={style.image}>

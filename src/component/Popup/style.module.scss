@@ -2,12 +2,18 @@
 @import '../../scss/globals.scss';
 
 .popup {
-  background-color: white;
-  width: 100%;
   flex-direction: column;
   position: absolute;
-  box-shadow: 0 0 0.2rem;
-  z-index: 1;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.content {
+  background-color: white;
+  width: Min(100%, 1400px);
 }
 
 .close {
@@ -55,4 +61,35 @@
 .tags {
   display: flex;
   gap: 0.5em;
+}
+
+@media (min-width: $md-screen) {
+  .title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .info {
+    @include center-mixin();
+    & > div {
+      @include column-mixin();
+      max-width: 600px;
+      width: 100%;
+      align-items: flex-start;
+    }
+  }
+
+  .buttons {
+    flex-direction: row;
+    margin: 0;
+    gap: 1em;
+  }
+
+  .button {
+    width: 12em;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.5em 1em;
+  }
 }
