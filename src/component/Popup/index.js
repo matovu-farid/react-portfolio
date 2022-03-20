@@ -21,14 +21,14 @@ const Popup = ({
       </ul>
       <img src={image} alt={name} />
       <p>{description}</p>
-      <div className="buttons">
+      <div className={style.buttons}>
 
         <button onClick={() => openInNewtab(live)} type="button" className={style.button}>
           <span>See Live</span>
           <span><BsBoxArrowUpRight /></span>
         </button>
         <button onClick={() => openInNewtab(github)} type="button" className={style.button}>
-          <span>See Live</span>
+          <span>See Source</span>
           <span><BsGithub /></span>
         </button>
       </div>

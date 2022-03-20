@@ -1,12 +1,15 @@
 @import '../../scss/variables.scss';
 @import '../../scss/globals.scss';
 
+.section {
+  background: url('./hero.png') no-repeat;
+}
+
 .hero {
   color: $purple;
   display: flex;
   font-weight: 400;
   flex-direction: column;
-  background: url('./hero.png') no-repeat;
   width: 100%;
 }
 
@@ -25,10 +28,14 @@
   object-fit: cover;
 }
 @media only screen and (min-width: $md-screen) {
-  .hero {
-    background: url('./dhero.png') no-repeat right, url('./name.png') 30% 100% no-repeat;
-    background-size: 50% 100%, 18%;
+  .section {
+    @include center-mixin;
+    background: url('./dhero.png') no-repeat right, url('./name.png') 40% 100% no-repeat;
+    background-size: 50% 100%, 10%;
     height: 100vmin;
+  }
+  .hero {
+    max-width: $max-width;
     div {
       width: 50%;
     }

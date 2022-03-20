@@ -2,7 +2,6 @@
 @import '../../scss/globals.scss';
 
 .section {
-  @include center-mixin();
   background: url('./hero.png') no-repeat, #f9f9fa;
   width: 100%;
 }
@@ -20,11 +19,18 @@
   width: 100%;
 }
 
+.messege {
+  width: 100%;
+}
+  .identity {
+    width: 100%;
+  }
 @media (min-width: $md-screen) {
   .section {
     background: url('./contact_top.png') no-repeat top left,
       url('./contact_bottom.png') no-repeat bottom right, #f9f9fa;
     background-size: 25vmin, 25vmin, cover;
+    @include center-mixin();
   }
   .identity {
     width: 100%;
@@ -33,8 +39,5 @@
     & > * {
       flex: 1;
     }
-  }
-  .messege {
-    width: 100%;
   }
 }
