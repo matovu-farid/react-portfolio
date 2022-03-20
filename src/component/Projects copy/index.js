@@ -1,9 +1,7 @@
 import { v4 } from 'uuid';
 import style from './style.module.scss';
-import Project from '../Project';
-
+import Project from '../../Project';
 import Image from './laptop.png';
-import Slide from './Slide';
 
 const data = [
   {
@@ -64,7 +62,7 @@ const data = [
 const Projects = () => (
   <div id="projects" className={style['projects-section']}>
     <h3 className="heading">Projects</h3>
-    <Slide>
+    <ul className={style.projects}>
 
       {
       data.map((project) => (
@@ -74,7 +72,7 @@ const Projects = () => (
         </li>
       ))
     }
-    </Slide>
+    </ul>
   </div>
 );
 

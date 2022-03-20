@@ -17,7 +17,7 @@ const Homepage = () => {
     <div>
       <div className={`${style.navlist} center`}>
 
-        <Navlist close={null} />
+        <Navlist close={() => {}} />
       </div>
       <Backdrop display={display} mystyle={modal} />
       <Menu display={display} close={close} />

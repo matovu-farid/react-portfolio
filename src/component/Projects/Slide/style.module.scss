@@ -1,0 +1,24 @@
+@import '../../../scss/variables.scss';
+
+.controls {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.control {
+  font-size: $xl;
+}
+
+.slide {
+  width: 100%;
+  overflow: hidden;
+
+  border-radius: 2em;
+}
+
+.list {
+  display: flex;
+  transition: 250ms;
+  margin: 0;
+}
