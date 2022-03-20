@@ -1,9 +1,13 @@
 @import '../../../scss/variables.scss';
 @import '../../../scss/globals.scss';
 
-.items {
-  background: url('./lang.png') no-repeat right bottom, #1c528a;
-  background-size: 30%, cover;
+.card {
+  width: Min(100%, 500px);
+  height: 100%;
+  padding: 0;
+}
+
+.about-item {
   padding: 2em;
   color: $white;
 

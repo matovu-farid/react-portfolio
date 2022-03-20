@@ -1,11 +1,12 @@
 import About from '../../component/About';
 import AboutCards from '../../component/AboutCards';
+import style from './style.module.scss';
 
 const AboutSection = () => (
-  <div id="about">
+  <section className={style.section} id="about">
     <About />
     <AboutCards />
-  </div>
+  </section>
 );
 
 export default AboutSection;

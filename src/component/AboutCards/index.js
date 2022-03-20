@@ -1,9 +1,9 @@
 import style from './style.module.scss';
 import '../../scss/globals.scss';
-import AboutCard from '../AboutCard';
 import Lang from './lang.png';
 import Frame from './frame.png';
 import Skills from './skills.png';
+import AboutCard from './AboutCard';
 
 const AboutCards = () => {
   const objects = [
