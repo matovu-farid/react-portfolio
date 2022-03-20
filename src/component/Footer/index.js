@@ -4,7 +4,7 @@ import { BsTwitter, BsLinkedin, BsBoxArrowUpRight } from 'react-icons/bs';
 import style from './style.module.scss';
 
 const Footer = () => (
-  <div className={style.footer}>
+  <footer className={style.footer}>
     <button className={style.button} type="button">
       <span>Get my Resume</span>
       <span><BsBoxArrowUpRight /></span>
@@ -16,7 +16,7 @@ const Footer = () => (
       <FaAngellist />
       <AiOutlineMedium />
     </div>
-  </div>
+  </footer>
 );
 
 export default Footer;

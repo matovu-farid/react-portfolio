@@ -27,3 +27,20 @@
   flex: 1;
   font-size: $lg;
 }
+
+@media (min-width: $md-screen) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5em;
+  }
+  .links {
+    display: inline;
+    margin: auto 0;
+  }
+
+  .links > * {
+    margin: 0 0.2em;
+  }
+}
