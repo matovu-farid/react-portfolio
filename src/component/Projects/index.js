@@ -62,7 +62,7 @@ const data = [
   },
 ];
 const Projects = () => (
-  <div id="projects" className={style['projects-section']}>
+  <section id="projects" className={style['projects-section']}>
     <h3 className="heading">Projects</h3>
     <Slide>
 
@@ -76,7 +76,7 @@ const Projects = () => (
       ))
     }
     </Slide>
-  </div>
+  </section>
 );
 
 export default Projects;

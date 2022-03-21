@@ -3,7 +3,7 @@ import AboutCards from '../../component/AboutCards';
 import style from './style.module.scss';
 
 const AboutSection = () => (
-  <section className="center-box">
+  <section className={`center-box ${style.section}`}>
 
     <div className={style.about} id="about">
       <About />
