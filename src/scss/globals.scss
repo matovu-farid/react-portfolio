@@ -76,19 +76,22 @@ button {
   margin: 0;
 }
 
-
 @mixin column-mixin() {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 @mixin center-mixin() {
   @include column-mixin();
+
   justify-content: center;
   align-items: center;
 }
+
 .center-box {
   @include center-mixin();
 }
+
 .center {
   display: flex;
   justify-content: center;
@@ -109,6 +112,7 @@ flex-direction: column;
   .purple-btn {
     max-width: 240px;
   }
+
   .heading {
     font-size: 7rem;
   }

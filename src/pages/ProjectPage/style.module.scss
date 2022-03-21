@@ -3,6 +3,7 @@
 
 .navlist {
   display: none;
+
   ul {
     margin: 0;
     padding: 1em 0;
@@ -14,6 +15,7 @@
   .page {
     @include center-mixin();
   }
+
   .navlist {
     display: flex;
   }

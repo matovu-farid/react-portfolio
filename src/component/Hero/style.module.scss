@@ -27,22 +27,28 @@
   height: 220px;
   object-fit: cover;
 }
+
 @media only screen and (min-width: $md-screen) {
   .section {
     @include center-mixin;
+
     background: url('./dhero.png') no-repeat right, url('./name.png') 40% 100% no-repeat;
     background-size: 50% 100%, 10%;
     height: 100vmin;
   }
+
   .hero {
     max-width: $max-width;
+
     div {
       width: 50%;
     }
   }
+
   .menu {
     display: none;
   }
+
   .divider {
     display: none;
   }
