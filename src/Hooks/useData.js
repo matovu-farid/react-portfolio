@@ -1,13 +1,12 @@
-import { v4 } from 'uuid';
-import style from './style.module.scss';
-import Project from '../../Project';
+import { useState } from 'react';
 import Image from './laptop.png';
 
-const data = [
-  {
-    id: v4(),
-    name: 'Name goes here',
-    description: `
+const useData = () => {
+  const array = [
+    {
+      id: '1',
+      name: 'Name goes here',
+      description: `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
     sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -16,16 +15,16 @@ const data = [
     sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
     ullamco laboris nisi.`,
-    tags: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-    image: Image,
-    live: '',
-    github: '',
+      tags: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+      image: Image,
+      live: '',
+      github: '',
 
-  },
-  {
-    id: v4(),
-    name: 'Name goes here',
-    description: `
+    },
+    {
+      id: '2',
+      name: 'Name goes here',
+      description: `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
     sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -34,16 +33,16 @@ const data = [
     sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
     ullamco laboris nisi.`,
-    tags: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-    image: Image,
-    live: '',
-    github: '',
+      tags: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+      image: Image,
+      live: '',
+      github: '',
 
-  },
-  {
-    id: v4(),
-    name: 'Name goes here',
-    description: `
+    },
+    {
+      id: '3',
+      name: 'Name goes here',
+      description: `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
     sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -52,28 +51,14 @@ const data = [
     sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
     ullamco laboris nisi.`,
-    tags: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-    image: Image,
-    live: '',
-    github: '',
+      tags: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+      image: Image,
+      live: '',
+      github: '',
 
-  },
-];
-const Projects = () => (
-  <div id="projects" className={style['projects-section']}>
-    <h3 className="heading">Projects</h3>
-    <ul className={style.projects}>
-
-      {
-      data.map((project) => (
-        <li key={project.id}>
-
-          <Project project={project} />
-        </li>
-      ))
-    }
-    </ul>
-  </div>
-);
-
-export default Projects;
+    },
+  ];
+  const [data] = useState(array);
+  return data;
+};
+export default useData;

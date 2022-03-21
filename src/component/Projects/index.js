@@ -1,82 +1,25 @@
-import { v4 } from 'uuid';
 import style from './style.module.scss';
 import Project from '../Project';
 
-import Image from './laptop.png';
 import Slide from './Slide';
+import useData from '../../Hooks/useData';
 
-const data = [
-  {
-    id: v4(),
-    name: 'Name goes here',
-    description: `
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi Ut aliquip ex ea commodo consequat. 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi.`,
-    tags: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-    image: Image,
-    live: '',
-    github: '',
+const Projects = () => {
+  const data = useData();
+  return (
+    <section id="projects" className={style['projects-section']}>
+      <h3 className="heading">Projects</h3>
+      <Slide>
 
-  },
-  {
-    id: v4(),
-    name: 'Name goes here',
-    description: `
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi Ut aliquip ex ea commodo consequat. 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi.`,
-    tags: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-    image: Image,
-    live: '',
-    github: '',
+        {data.map((project) => (
+          <li key={project.id}>
 
-  },
-  {
-    id: v4(),
-    name: 'Name goes here',
-    description: `
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi Ut aliquip ex ea commodo consequat. 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi.`,
-    tags: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-    image: Image,
-    live: '',
-    github: '',
-
-  },
-];
-const Projects = () => (
-  <section id="projects" className={style['projects-section']}>
-    <h3 className="heading">Projects</h3>
-    <Slide>
-
-      {
-
-      data.map((project) => (
-        <li key={project.id}>
-
-          <Project project={project} />
-        </li>
-      ))
-    }
-    </Slide>
-  </section>
-);
+            <Project project={project} />
+          </li>
+        ))}
+      </Slide>
+    </section>
+  );
+};
 
 export default Projects;

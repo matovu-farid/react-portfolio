@@ -1,32 +1,20 @@
 import { BsArrowRight } from 'react-icons/bs';
 import propTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import style from './style.module.scss';
-import Popup from '../Popup';
-import Backdrop from '../Backdrop';
-import usePopup from '../../Hooks/usePopup';
 
 const Project = ({
   project,
 }) => {
-  const {
-    display, modal, close, seeMore,
-  } = usePopup();
+  const navigate = useNavigate();
+  const seePoject = () => {
+    navigate(`/projects/${project.id}`);
+  };
 
   return (
     <>
-      <Backdrop
-        display={display}
-        mystyle={modal}
-      />
       <div className={style.project}>
 
-        <Popup
-          display={{
-            display,
-          }}
-          project={project}
-          close={close}
-        />
         <div className={style['project-section']}>
 
           <div className={style.image}>
@@ -41,7 +29,7 @@ const Project = ({
             project.tags.map((tag) => (<li key={tag}>{tag}</li>))
           }
             </ul>
-            <button className={style.button} onClick={seeMore} type="button">
+            <button className={style.button} onClick={seePoject} type="button">
               <span>See this project</span>
               <span><BsArrowRight /></span>
             </button>

@@ -36,6 +36,10 @@ button {
   background: transparent;
 }
 
+.button {
+  cursor: pointer;
+}
+
 .purple-btn {
   background-color: $purple;
   color: $white;
