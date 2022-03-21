@@ -12,6 +12,10 @@
 }
 
 @media (min-width: $md-screen) {
+  .page {
+    @include center-mixin();
+  }
+
   .navlist {
     display: flex;
   }

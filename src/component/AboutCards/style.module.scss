@@ -6,3 +6,18 @@
 
   background: url('./frame.png');
 }
+
+.cards {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-row-gap: 1em;
+}
+
+@media (min-width: $md-screen) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 0;
+  }
+}

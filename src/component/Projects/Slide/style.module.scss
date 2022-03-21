@@ -1,0 +1,57 @@
+@import '../../../scss/variables.scss';
+
+.control {
+  font-size: $xl;
+  display: none;
+  cursor: pointer;
+  color: $purple;
+}
+
+.slide {
+  width: 100%;
+  overflow: hidden;
+  height: 600px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  transition: 250ms;
+  margin: 0;
+}
+
+.verticle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+
+  button {
+    flex: 1;
+    max-width: 200px;
+  }
+}
+
+@media (min-width: $md-screen) {
+  .verticle-buttons {
+    display: none;
+  }
+
+  .controls {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+
+  .slide {
+    border-radius: 2em;
+    height: 100%;
+  }
+
+  .list {
+    flex-direction: row;
+  }
+
+  .control {
+    display: block;
+  }
+}

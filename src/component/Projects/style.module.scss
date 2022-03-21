@@ -1,6 +1,23 @@
 @import '../../scss/variables.scss';
 
-.projects {
+.projects-section {
   display: flex;
   flex-direction: column;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+@media (min-width: $md-screen) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+  }
+
+  .projects-section {
+    text-align: center;
+  }
 }

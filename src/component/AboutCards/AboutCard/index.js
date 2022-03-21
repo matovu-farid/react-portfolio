@@ -1,16 +1,19 @@
-import '../../scss/globals.scss';
+import '../../../scss/globals.scss';
+
 import propTypes from 'prop-types';
+import style from './style.module.scss';
 
 const AboutCard = ({
   list, color, image, title,
 }) => (
-  <div className="content">
+  <div className={`content ${style.card}`}>
     <div
-      className="about-item"
+      className={style['about-item']}
       style={{
 
         background: `url(${image}) no-repeat right bottom,${color}`,
         backgroundSize: '30%, cover',
+        height: '100%',
       }}
     >
 

@@ -12,12 +12,6 @@ body {
   color: $purple;
 }
 
-dialog {
-  border: none;
-  width: 100%;
-  padding: 0;
-}
-
 a {
   text-decoration: none;
   color: $purple;
@@ -29,6 +23,21 @@ ul {
 
 li {
   list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.text-button {
+  color: $purple;
+  font-size: $md;
+  background: transparent;
+}
+
+.button {
+  cursor: pointer;
 }
 
 .purple-btn {
@@ -67,6 +76,27 @@ li {
   margin: 0;
 }
 
+@mixin column-mixin() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center-mixin() {
+  @include column-mixin();
+
+  justify-content: center;
+  align-items: center;
+}
+
+.center-box {
+  @include center-mixin();
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 @mixin alignBtn() {
   display: flex;
   align-items: center;
@@ -78,23 +108,12 @@ li {
   }
 }
 
-.text-button {
-  border: none;
-  background: transparent;
-  color: $purple;
-  font-size: $md;
-}
-
-.about-item {
-  padding: 2em;
-  color: $white;
-
-  h2 {
-    font-weight: 800;
-    font-size: 1.2rem;
+@media (min-width: $md-screen) {
+  .purple-btn {
+    max-width: 240px;
   }
 
-  li {
-    list-style-type: disc;
+  .heading {
+    font-size: 7rem;
   }
 }

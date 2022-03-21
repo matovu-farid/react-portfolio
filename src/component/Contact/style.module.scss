@@ -1,15 +1,50 @@
 @import '../../scss/variables.scss';
 @import '../../scss/globals.scss';
 
+.section {
+  background: url('./hero.png') no-repeat, #f9f9fa;
+  width: 100%;
+}
+
 .contact {
   color: $purple;
   display: flex;
   font-weight: 400;
   flex-direction: column;
-  background: url('./hero.png') no-repeat, #f9f9fa;
   width: 100%;
+  max-width: $contact-width;
 }
 
 .input {
   width: 100%;
+}
+
+.messege {
+  width: 100%;
+}
+
+.identity {
+  width: 100%;
+}
+
+@media (min-width: $md-screen) {
+  .section {
+    background:
+      url('./contact_top.png') no-repeat top left,
+      url('./contact_bottom.png') no-repeat bottom right,
+      #f9f9fa;
+    background-size: 25vmin, 25vmin, cover;
+
+    @include center-mixin();
+  }
+
+  .identity {
+    width: 100%;
+    display: flex;
+    gap: 2em;
+
+    & > * {
+      flex: 1;
+    }
+  }
 }
