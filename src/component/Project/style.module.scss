@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100vw;
 }
 
 .footer {
@@ -41,6 +42,11 @@
   border: 1px solid white;
   background-color: transparent;
   padding: 0.5em 1em;
+
+  &:hover {
+    background-color: $white;
+    color: $purple;
+  }
 }
 
 .image {
@@ -78,6 +84,7 @@
   .project {
     display: flex;
     flex-direction: row;
+    width: 100%;
     min-width: 700px;
   }
 

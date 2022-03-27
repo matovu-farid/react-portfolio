@@ -45,7 +45,13 @@ button {
   color: $white;
   font-size: $md;
   padding: 1em 2em;
+  max-width: 400px;
+  margin: 0 auto;
   border: none;
+
+  &:hover {
+    background-color: $purple-light;
+  }
 }
 
 .heading {
@@ -115,5 +121,10 @@ button {
 
   .heading {
     font-size: 7rem;
+  }
+
+  .section {
+    max-width: $max-width;
+    margin: 0 auto;
   }
 }

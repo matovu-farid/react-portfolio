@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import style from './style.module.scss';
 import Project from '../Project';
 
@@ -6,13 +7,16 @@ import useData from '../../Hooks/useData';
 
 const Projects = () => {
   const data = useData();
+  const ref = useRef();
+
   return (
-    <section id="projects" className={style['projects-section']}>
+    <section id="projects" className={`${style['projects-section']} section`}>
       <h3 className="heading">Projects</h3>
-      <Slide>
+      <Slide refe={ref}>
 
         {data.map((project) => (
-          <li key={project.id}>
+
+          <li ref={ref} key={project.id}>
 
             <Project project={project} />
           </li>

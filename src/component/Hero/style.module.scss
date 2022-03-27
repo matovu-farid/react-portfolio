@@ -19,6 +19,11 @@
   justify-content: flex-end;
 }
 
+.content {
+  gap: 2em;
+  margin-bottom: 6em;
+}
+
 .divider {
   background: url('./divider.png') no-repeat;
   background-size: 100%;

@@ -3,10 +3,10 @@ import propTypes from 'prop-types';
 import style from './style.module.scss';
 
 const Hero = ({ showMenu }) => (
-  <section className={style.section}>
+  <section className={`${style.section} section`}>
 
     <div id="hero" className={style.hero}>
-      <div className="content">
+      <div className={`content ${style.content}`}>
 
         <div className={style.menu}>
           <GiHamburgerMenu onClick={showMenu} />
