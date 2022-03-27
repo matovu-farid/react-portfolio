@@ -2,7 +2,7 @@ import { TextField, Box } from '@mui/material';
 import style from './style.module.scss';
 
 const Contact = () => (
-  <section className={style.section}>
+  <section className={style['contact-section']}>
 
     <div id="contact" className={style.contact}>
       <div className="content center-box">

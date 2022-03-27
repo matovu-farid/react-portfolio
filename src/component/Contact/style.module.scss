@@ -1,7 +1,7 @@
 @import '../../scss/variables.scss';
 @import '../../scss/globals.scss';
 
-.section {
+.contact-section {
   background: url('./hero.png') no-repeat, #f9f9fa;
   width: 100%;
 }
@@ -28,7 +28,7 @@
 }
 
 @media (min-width: $md-screen) {
-  .section {
+  .contact-section {
     background:
       url('./contact_top.png') no-repeat top left,
       url('./contact_bottom.png') no-repeat bottom right,
