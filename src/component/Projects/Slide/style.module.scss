@@ -23,8 +23,6 @@
 
 .list {
   display: flex;
-
- 
   transition: 300ms;
   margin: 0;
 }
@@ -34,20 +32,20 @@
   justify-content: center;
   gap: 1em;
   max-width: 500px;
-  
   margin: 1em auto;
 
   button {
     flex: 1;
     max-width: 200px;
-   
   }
 }
 
 @media (min-width: $md-screen) {
   .list {
     height: 100%;
+    flex-direction: row;
   }
+
   .verticle-buttons {
     display: none;
   }
@@ -63,9 +61,7 @@
     height: 100%;
   }
 
-  .list {
-    flex-direction: row;
-  }
+
 
   .control {
     display: block;
