@@ -18,7 +18,7 @@ export const projectSlice = createSlice({
       state.push(...action.payload);
     });
   },
-  reducers: {},
+
 });
 
 // Action creators are generated for each case reducer function

@@ -1,12 +1,17 @@
 import { useRef } from 'react';
+import { useSelector } from 'react-redux';
 import style from './style.module.scss';
 import Project from '../Project';
 
 import Slide from './Slide';
-import useData from '../../Hooks/useData';
 
 const Projects = () => {
-  const data = useData();
+  const data = useSelector((state) => state.project);
+
+  // useEffect(() => {
+  //   setData(projects);
+  // }, [projects]);
+
   const ref = useRef();
 
   return (

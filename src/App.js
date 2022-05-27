@@ -8,6 +8,7 @@ import ProjectPage from './pages/ProjectPage';
 
 function App() {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchProjects());
   }, []);
