@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import { fetchProjects } from './app/projects';
 import Homepage from './pages/Homepage';
 import ProjectPage from './pages/ProjectPage';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchProjects());
+  }, []);
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
