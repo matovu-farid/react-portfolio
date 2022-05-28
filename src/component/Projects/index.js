@@ -8,6 +8,9 @@ function Item({ item }) {
       <h2>{item.name}</h2>
       <p>{item.description}</p>
       <img className={style.projectimg} src={item.image} alt="" />
+      <button class="bg-blue-500 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+        Github
+      </button>
     </div>
   );
 }
