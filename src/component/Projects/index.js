@@ -1,33 +1,40 @@
-import { useRef } from 'react';
 import { useSelector } from 'react-redux';
+import Carousel from 'react-material-ui-carousel';
 import style from './style.module.scss';
-import Project from '../Project';
 
-import Slide from './Slide';
+function Item({ item }) {
+  return (
+    <div>
+      <h2>{item.name}</h2>
+      <p>{item.description}</p>
+      <img className={style.projectimg} src={item.image} alt="" />
+    </div>
+  );
+}
+const MyCarousal = ({ data }) => (
+  <div>
+    <Carousel
+      className={style['center-project']}
+      navButtonsProps={{
+        style: {
+          opacity: 1,
+        },
+      }}
+    >
+
+      {
+          data.map((item) => <Item key={item.name} item={item} />)
+            }
+    </Carousel>
+  </div>
+);
 
 const Projects = () => {
   const data = useSelector((state) => state.project);
-
-  // useEffect(() => {
-  //   setData(projects);
-  // }, [projects]);
-
-  const ref = useRef();
-
   return (
-    <section id="projects" className={`${style['projects-section']} section`}>
-      <h3 className="heading">Projects</h3>
-      <Slide refe={ref}>
-
-        {data.map((project) => (
-
-          <li ref={ref} key={project.id}>
-
-            <Project project={project} />
-          </li>
-        ))}
-      </Slide>
-    </section>
+    <MyCarousal
+      data={data}
+    />
   );
 };
 
