@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
+import projectReducer from './projects';
 
-const reducer = (state = '') => state;
 export const store = configureStore({
   reducer: {
-    reducer,
+    project: projectReducer,
   },
 });
 
