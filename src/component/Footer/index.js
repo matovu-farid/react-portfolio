@@ -9,7 +9,7 @@ const Footer = () => (
       <span>Get my Resume</span>
       <span><BsBoxArrowUpRight /></span>
     </button>
-    <div className={style.links}>
+    <div className={style.links + ' flex'}>
       <AiFillGithub />
       <BsTwitter />
       <BsLinkedin />
