@@ -35,10 +35,11 @@ const About = () => (
       </pre>
 
     </ShowMore>
-    <button type="button" className={`bg-gray-900 text-white w-48 py-2 px-5 ${style.button}`}>
+    <a type="button" className={`bg-gray-900 text-white w-48 py-2 px-5 ${style.button}`}  
+    href="https://drive.google.com/uc?export=download&id=1IPAv-ij0JsEhFCDiw6g8n_YuIyGvGTQE" download>
       <span>Get my CV</span>
       <span><BiDownload /></span>
-    </button>
+    </a>
   </div>
 );
 
