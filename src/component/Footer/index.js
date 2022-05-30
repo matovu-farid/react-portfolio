@@ -5,10 +5,10 @@ import style from './style.module.scss';
 
 const Footer = () => (
   <footer className={style.footer}>
-    <button className={style.button} type="button">
+    <a className={style.button} type="button" href="https://drive.google.com/uc?export=download&id=1IPAv-ij0JsEhFCDiw6g8n_YuIyGvGTQE" download>
       <span>Get my Resume</span>
       <span><BsBoxArrowUpRight /></span>
-    </button>
+    </a>
     <div className={`${style.links} flex`}>
       <AiFillGithub />
       <BsTwitter />
