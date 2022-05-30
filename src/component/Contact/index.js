@@ -1,16 +1,20 @@
 import { TextField, Box } from '@mui/material';
 import style from './style.module.scss';
+import { useForm, ValidationError } from '@formspree/react';
 
-const Contact = () => (
-  <section className={style['contact-section']}>
-
-    <div id="contact" className={style.contact}>
+const Contact = () => {
+  let [state, handleSubmit] = useForm("mayvwppv");
+  return <section className={style['contact-section']}>
+{
+    (state.succeeded)?
+        <p>Thank you,I will reach out as soon as possible!</p>
+        : ''  
+}
+    <form onSubmit={handleSubmit} id="contact" className={style.contact}>
       <div className="content center-box">
         <h2 className="heading">Get started</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit, sed do eiusmod tempor incididunt ut labore
-          et dolore magna.
+          Please get in touch as soon as possible so we could start building awesome projects together. I look forward to hearing from you
         </p>
         <div className={style.identity}>
 
@@ -20,17 +24,27 @@ const Contact = () => (
           </Box>
 
           <Box my={2}>
-            <TextField type="email" className={style.input} id="outlined-basic" label="You email" variant="outlined" />
+            <TextField type="email" name="email" className={style.input} id="outlined-basic" label="You email" variant="outlined" />
+            <ValidationError 
+              prefix="Email" 
+              field="email"
+              errors={state.errors}
+            />
           </Box>
         </div>
         <Box my={2} className={style.messege}>
-          <TextField className={style.input} id="outlined-basic" label="Messege" variant="outlined" multiline minRows={5} />
+          <TextField name="message" className={style.input} id="outlined-basic" label="Message" variant="outlined" multiline minRows={5} />
+          <ValidationError 
+            prefix="Message" 
+            field="message"
+            errors={state.errors}
+          />
         </Box>
-        <button type="button" className="purple-btn">Start collaboration</button>
+        <button disabled={state.submitting} type="submit" className=" bg-gray-800 py-3 px-5 text-white">Start collaboration</button>
 
       </div>
-    </div>
+    </form>
   </section>
-);
+};
 
 export default Contact;
