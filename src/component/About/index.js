@@ -6,14 +6,9 @@ import '../../scss/globals.scss';
 const About = () => (
   <div className="">
     <h2 className="heading">About</h2>
-    <ShowMore
-      className=""
-      lines={8}
-      more="Show more"
-      less="Show less"
-      anchorClass="bg-gray-800 text-white rounded py-1 px-2"
-    >
-      <pre>
+   
+    
+      <p>
 
         Hello, I am Farid, a full-stack software engineer
         who specialises in using Flutter, Firebase and
@@ -32,9 +27,9 @@ const About = () => (
         different time zones.At Microverse,
         I built various projects like the blo app for
         task management and the website for the Pearl of Africa Tour.
-      </pre>
+      </p>
 
-    </ShowMore>
+   
     <a
       type="button"
       className={`bg-gray-900 text-white w-48 py-2 px-5 ${style.button}`}
