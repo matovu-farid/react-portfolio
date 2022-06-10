@@ -13,11 +13,9 @@ const Contact = () => {
 }
       <form onSubmit={handleSubmit} id="contact" className={style.contact}>
         <div className="content center-box">
-          <h2 className="heading">Get started</h2>
+          <h2 className="heading"> Start here</h2>
           <p>
-            Please get in touch as soon as possible
-            so we could start building awesome projects
-            together. I look forward to hearing from you
+            Let's work together!
           </p>
           <div className={style.identity}>
 

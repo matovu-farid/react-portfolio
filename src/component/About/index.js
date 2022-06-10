@@ -9,23 +9,10 @@ const About = () => (
     
       <p>
 
-        Hello, I am Farid, a full-stack software engineer
+        I am  full-stack software engineer
         who specialises in using Flutter, Firebase and
         JavaScript to build software solutions for businesses.
-        I am in the top 1% of active GitHub users in my
-        country, which is something I am really proud of.
-        I then developed an application for Case Medical
-        Insurance that shows their clients the nearest
-        health provider to visit in order to access healthcare.
-        I also developed and published an application that got
-        over 1000 downloads called Painter which is used
-        mainly by kids to paint.
-        I then joined Microverse which is a remote
-        development school where I am learning to work
-        remotely and pair-program with people across
-        different time zones.At Microverse,
-        I built various projects like the blo app for
-        task management and the website for the Pearl of Africa Tour.
+        Look below and swipe to see some of my projects
       </p>
 
    

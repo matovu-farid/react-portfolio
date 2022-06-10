@@ -22,8 +22,9 @@ const Homepage = () => {
       <Backdrop display={display} mystyle={modal} />
       <Menu display={display} close={close} />
       <Hero showMenu={seeMore} />
-      <Projects />
       <AboutSection />
+      <Projects />
+      
       <Contact />
       <Footer />
     </div>

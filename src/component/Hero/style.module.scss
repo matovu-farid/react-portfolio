@@ -3,6 +3,7 @@
 
 .section {
   background: url('./hero.png') no-repeat;
+  height: 100vmin;
 }
 
 .hero {
@@ -19,10 +20,7 @@
   justify-content: flex-end;
 }
 
-.content {
-  gap: 2em;
-  margin-bottom: 6em;
-}
+
 
 .divider {
   background: url('./divider.png') no-repeat;
@@ -35,18 +33,18 @@
 
 @media only screen and (min-width: $md-screen) {
   .section {
-    @include center-mixin;
+   
 
     background: url('./dhero.png') no-repeat right, url('./name.png') 40% 100% no-repeat;
     background-size: 50% 100%, 10%;
-    height: 100vmin;
+    height: 80vmin;
   }
 
   .hero {
     max-width: $max-width;
 
     div {
-      width: 50%;
+      width: 60%;
     }
   }
 
