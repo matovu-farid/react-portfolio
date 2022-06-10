@@ -1,5 +1,4 @@
 import { BiDownload } from 'react-icons/bi';
-import ShowMore from 'react-show-more';
 import style from './style.module.scss';
 import '../../scss/globals.scss';
 
