@@ -1,49 +1,42 @@
-import { BsArrowRight } from 'react-icons/bs';
-import propTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
-import style from './style.module.scss';
+import { useState } from 'react';
+import { DummyImage } from 'react-simple-placeholder-image';
 
-const Project = ({
-  project,
-}) => {
-  const navigate = useNavigate();
-  const seePoject = () => {
-    navigate(`/projects/${project.id}`);
-  };
-
+function Project({ item }) {
+  const [loaded, setLoaded] = useState(false);
+  const imageStyle = (loaded) => (loaded ? 'w-full h-full object-fill' : 'hidden');
   return (
-    <>
-      <div className={style.project}>
+    <div className="container mx-auto shadow-2xl">
+      <div className="flex gap-2 flex-col md:flex-row">
+        <div className="w-full h-96">
+          {
 
-        <div className={style['project-section']}>
+          (loaded)
+            ? null
+            : <DummyImage className="w-full h-full" shape="image" />
 
-          <div className={style.image}>
-
-            <img src={project.image} alt="project" />
-          </div>
-
-          <div className={style.footer}>
-            <h3>{project.name}</h3>
-            <ul className={style.tags}>
-              {
-            project.tags.map((tag) => (<li key={tag}>{tag}</li>))
           }
-            </ul>
-            <button className={style.button} onClick={seePoject} type="button">
-              <span>See this project</span>
-              <span><BsArrowRight /></span>
-            </button>
+          <img
+            className={imageStyle(loaded)}
+            src={item.image}
+            alt={item.name}
+            onLoad={() => {
+              setLoaded(true);
+            }}
+          />
+        </div>
 
-          </div>
+        <div className="max-w-lg  my-auto">
+          <h2>{item.name}</h2>
 
+          <p>{item.description}</p>
         </div>
       </div>
-    </>
+      <div className="w-full flex flex-col justify-center">
+        <a href={item.github} target="_blank" className="mx-auto cursor-pointer bg-gray-900 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded inline-flex items-center" rel="noreferrer">
+          Github
+        </a>
+      </div>
+    </div>
   );
-};
-
-Project.propTypes = {
-  project: propTypes.instanceOf(Object).isRequired,
-};
-
+}
 export default Project;

@@ -20,16 +20,6 @@
   align-items: center;
 }
 
-.projectimg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1000px;
-  height: 800px;
-  object-fit: contain;
-  margin: auto auto;
-}
-
 @media (min-width: $md-screen) {
   .center-project {
     width: 80%;

@@ -11,16 +11,18 @@ const Hero = ({ showMenu }) => (
         <div className={style.menu}>
           <GiHamburgerMenu onClick={showMenu} />
         </div>
-        <h1 className="heading">Farid Matovu</h1>
-        <p className="text">
-          Hello! I am a software developer! I can help you build
-          a product, feature or website. Taka a look of my works.
-          If you like what you see and have a project you need coded,
-          don’t hesitate and contact me.
-        </p>
-        <button type="button" className="purple-btn">Start Collaboration</button>
+        <div className="flex flex-col justify-center align-middle">
+
+          <h1 className="heading lg:text-8xl">
+            Hi! am,
+            <br />
+            {' '}
+            Farid Matovu
+          </h1>
+        </div>
+
       </div>
-      <div className={style.divider} />
+      {/* <div className={style.divider} /> */}
     </div>
   </section>
 );

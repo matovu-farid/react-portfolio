@@ -16,7 +16,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const projects = async () => {
-  const snapshots = await getDocs(collection(db, 'projects'));
+  const snapshots = await getDocs(collection(db, 'favorites'));
   const results = [];
   snapshots.forEach((doc) => results.push(doc.data()));
   return results;

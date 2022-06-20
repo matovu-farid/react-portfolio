@@ -10,19 +10,19 @@ const AboutCards = () => {
     {
       title: 'Languages',
       image: Lang,
-      items: ['JavaScript', 'Ruby', 'HTML', 'CSS', 'React'],
+      items: ['JavaScript', 'Ruby', 'Dart'],
       color: '#1C528A',
     },
     {
-      title: 'Frameworks',
+      title: 'Skills',
       image: Frame,
       items: ['Ruby on rails', 'React', 'Flutter'],
       color: '#E2505C',
     },
     {
-      title: 'Skills',
+      title: 'Extra Skills',
       image: Skills,
-      items: ['Github', 'Codepen', 'TDD', 'Responsive Design', 'Terminal'],
+      items: ['Github', 'TDD', 'Responsive Design'],
       color: '#FEBF52',
     },
   ];
