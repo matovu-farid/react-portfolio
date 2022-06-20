@@ -20,8 +20,6 @@
   justify-content: flex-end;
 }
 
-
-
 .divider {
   background: url('./divider.png') no-repeat;
   background-size: 100%;
@@ -33,8 +31,6 @@
 
 @media only screen and (min-width: $md-screen) {
   .section {
-   
-
     background: url('./dhero.png') no-repeat right, url('./name.png') 40% 100% no-repeat;
     background-size: 50% 100%, 10%;
     height: 80vmin;
