@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import style from './style.module.scss';
 
 const Hero = ({ showMenu }) => (
-  <section className={`${style.section} section`}>
+  <section className={`${style.section} section h-screen`}>
 
     <div id="hero" className={style.hero}>
       <div className={`content ${style.content}`}>

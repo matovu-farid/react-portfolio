@@ -9,6 +9,14 @@ import usePopup from '../../Hooks/usePopup';
 import AboutSection from '../AboutSection';
 import style from './style.module.scss';
 
+const Animate = ({ children }) => (
+  <div data-aos="fade-down" data-aos-easing="ease-in-sine">
+    {
+
+     children
+    }
+  </div>
+);
 const Homepage = () => {
   const {
     display, seeMore, close, modal,
@@ -21,12 +29,26 @@ const Homepage = () => {
       </div>
       <Backdrop display={display} mystyle={modal} />
       <Menu display={display} close={close} />
-      <Hero showMenu={seeMore} />
-      <AboutSection />
-      <Projects />
+      <Animate>
 
-      <Contact />
-      <Footer />
+        <Hero showMenu={seeMore} />
+      </Animate>
+      <Animate>
+
+        <AboutSection />
+      </Animate>
+      <Animate>
+
+        <Projects />
+      </Animate>
+      <Animate>
+
+        <Contact />
+      </Animate>
+      <Animate>
+
+        <Footer />
+      </Animate>
     </div>
   );
 };
