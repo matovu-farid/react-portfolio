@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = matovu-farid
+	email = matovu90@gmail.com
+	password = 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
+[credential]
+	helper = cache
+[user]
+	name = matovu-farid

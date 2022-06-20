@@ -1,13 +1,31 @@
 import { useSelector } from 'react-redux';
 import Carousel from 'react-material-ui-carousel';
+import { DummyImage } from 'react-simple-placeholder-image';
+import { useState } from 'react';
 import style from './style.module.scss';
 
 function Item({ item }) {
+  const [loaded, setLoaded] = useState(false);
+  const imageStyle = (loaded) => (loaded ? 'w-full h-full object-contain ' : 'hidden');
   return (
-    <div className="container mx-auto">
-      <div className="flex gap-2">
-        <div className="w-5xl h-100">
-          <img className="w-100 h-100 object-contain" src={item.image} alt="" />
+    <div className="container mx-auto shadow-2xl">
+      <div className="flex gap-2 flex-col md:flex-row">
+        <div className="w-full h-96">
+          {
+
+          (loaded)
+            ? null
+            : <DummyImage className="w-full h-full" shape="image" />
+
+          }
+          <img
+            className={imageStyle(loaded)}
+            src={item.image}
+            alt={item.name}
+            onLoad={() => {
+              setLoaded(true);
+            }}
+          />
         </div>
 
         <div className="max-w-lg  my-auto">

@@ -24,6 +24,7 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "react-show-more": "^2.0.0",
+    "react-simple-placeholder-image": "^0.1.2",
     "react-swipeable-views": "^0.14.0",
     "sass": "^1.49.9",
     "uuid": "^8.3.2"
