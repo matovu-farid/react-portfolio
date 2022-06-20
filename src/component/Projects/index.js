@@ -6,7 +6,7 @@ import style from './style.module.scss';
 
 function Item({ item }) {
   const [loaded, setLoaded] = useState(false);
-  const imageStyle = (loaded) => (loaded ? 'w-full h-full object-contain ' : 'hidden');
+  const imageStyle = (loaded) => (loaded ? 'w-full h-full object-fill' : 'hidden');
   return (
     <div className="container mx-auto shadow-2xl">
       <div className="flex gap-2 flex-col md:flex-row">
