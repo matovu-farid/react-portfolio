@@ -24,7 +24,7 @@ const Homepage = () => {
       <Hero showMenu={seeMore} />
       <AboutSection />
       <Projects />
-      
+
       <Contact />
       <Footer />
     </div>

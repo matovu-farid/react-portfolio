@@ -15,7 +15,7 @@ const Contact = () => {
         <div className="content center-box">
           <h2 className="heading"> Start here</h2>
           <p>
-            Let's work together!
+            Let&apos;s work together!
           </p>
           <div className={style.identity}>
 

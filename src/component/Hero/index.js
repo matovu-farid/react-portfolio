@@ -11,11 +11,16 @@ const Hero = ({ showMenu }) => (
         <div className={style.menu}>
           <GiHamburgerMenu onClick={showMenu} />
         </div>
-        <div className='flex flex-col justify-center align-middle'>
+        <div className="flex flex-col justify-center align-middle">
 
-          <h1 className="heading lg:text-8xl">Hi! am, <br/> Farid Matovu</h1>
+          <h1 className="heading lg:text-8xl">
+            Hi! am,
+            <br />
+            {' '}
+            Farid Matovu
+          </h1>
         </div>
-      
+
       </div>
       {/* <div className={style.divider} /> */}
     </div>
