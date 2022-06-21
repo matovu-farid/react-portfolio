@@ -18,7 +18,7 @@ const Contact = () => {
             Let&apos;s work together!
           </p>
           <div className={style.identity}>
-            <div className="flex gap-4 justify-between">
+            <div className="flex flex-col md:flex-row gap-4 justify-between">
 
               <div>
 
