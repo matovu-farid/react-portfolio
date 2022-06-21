@@ -7,7 +7,7 @@ function Project({ item }) {
   return (
     <div className="container mx-auto shadow-2xl p-8">
       <div className="flex gap-2 flex-col md:flex-row">
-        <div className="w-full h-96">
+        <div className="w-full h-56 md:h-96">
           {
 
           (loaded)
