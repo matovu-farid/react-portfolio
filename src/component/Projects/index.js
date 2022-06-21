@@ -1,17 +1,15 @@
 import { useSelector } from 'react-redux';
-import Carousel from 'react-material-ui-carousel';
-import style from './style.module.scss';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 import Project from '../Project';
 
 const MyCarousal = ({ data }) => (
-  <div>
+  <div className="w-100">
     <Carousel
-      className={style['center-project']}
-      navButtonsProps={{
-        style: {
-          opacity: 1,
-        },
-      }}
+      showStatus={false}
+      infiniteLoop
+      className="w-4/5 bg-slate-800 text-white mx-auto p-4 rounded-2xl"
+
     >
 
       {
