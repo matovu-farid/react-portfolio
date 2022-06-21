@@ -8,7 +8,8 @@ const MyCarousal = ({ data }) => (
     <Carousel
       showStatus={false}
       infiniteLoop
-      className="w-4/5 bg-slate-800 text-white mx-auto p-4 rounded-2xl"
+      autoPlay
+      className="w-4/5 bg-slate-800 text-white mx-auto  rounded-2xl"
 
     >
 

@@ -10,7 +10,7 @@ import AboutSection from '../AboutSection';
 import style from './style.module.scss';
 
 const Animate = ({ children }) => (
-  <div data-aos="fade-down" data-aos-easing="ease-in-sine">
+  <div data-aos="fade" data-aos-easing="ease-in-sine">
     {
 
      children
