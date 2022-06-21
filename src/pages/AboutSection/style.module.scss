@@ -1,0 +1,18 @@
+@use '../../scss/variables.scss' as *;
+
+@media (min-width: $md-screen) {
+  .section {
+    margin: 5rem auto;
+  }
+
+  .about {
+    max-width: $max-width;
+    gap: 3em;
+    display: flex;
+    flex-direction: row-reverse;
+
+    & > * {
+      flex: 1;
+    }
+  }
+}

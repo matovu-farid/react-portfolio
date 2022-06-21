@@ -1,0 +1,54 @@
+@import '../../scss/variables.scss';
+@import '../../scss/globals.scss';
+
+.section {
+  background: url('./hero.png') no-repeat;
+  height: 100vmin;
+}
+
+.hero {
+  color: $purple;
+  display: flex;
+  font-weight: 400;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu {
+  font-size: $lg;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.divider {
+  background: url('./divider.png') no-repeat;
+  background-size: 100%;
+  width: 100%;
+  display: flex;
+  height: 220px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: $md-screen) {
+  .section {
+    background: url('./dhero.png') no-repeat right, url('./name.png') 40% 100% no-repeat;
+    background-size: 50% 100%, 10%;
+    height: 80vmin;
+  }
+
+  .hero {
+    max-width: $max-width;
+
+    div {
+      width: 60%;
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .divider {
+    display: none;
+  }
+}

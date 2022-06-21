@@ -1,0 +1,20 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/globals.scss';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: $md;
+  padding: 2em 0;
+
+  li {
+    margin: 0.5em 0;
+  }
+}
+
+@media (min-width: $md-screen) {
+  .list {
+    flex-direction: row;
+  }
+}

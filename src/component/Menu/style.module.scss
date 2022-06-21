@@ -1,0 +1,36 @@
+@import '../../scss/variables.scss';
+@import '../../scss/globals.scss';
+
+.menu {
+  color: $purple;
+  display: flex;
+  font-weight: 400;
+  flex-direction: column;
+  background: url('./menu.png') no-repeat;
+  background-size: 60%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+}
+
+.divider {
+  background: url('./divider.png') no-repeat;
+  display: none;
+  background-size: 100%;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: $md;
+  padding: 2em 0;
+
+  li {
+    margin: 0.5em 0;
+  }
+}

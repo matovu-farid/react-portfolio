@@ -1,0 +1,130 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: $purple;
+}
+
+a {
+  text-decoration: none;
+  color: $purple;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.text-button {
+  color: $purple;
+  font-size: $md;
+  background: transparent;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.purple-btn {
+  background-color: $purple;
+  color: $white;
+  font-size: $md;
+  padding: 1em 2em;
+  max-width: 400px;
+  margin: 0 auto;
+  border: none;
+
+  &:hover {
+    background-color: $purple-light;
+  }
+}
+
+.heading {
+  font-size: $xl;
+  margin: 1em 0 0;
+  color: $purple;
+  font-family: 'Playfair Display', serif;
+}
+
+.content {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+
+.text {
+  padding: 1em 0;
+  font-size: $sm;
+  line-height: 1.5em;
+  width: 80%;
+  margin: 0;
+}
+
+@mixin column-mixin() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center-mixin() {
+  @include column-mixin();
+
+  justify-content: center;
+  align-items: center;
+}
+
+.center-box {
+  @include center-mixin();
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin alignBtn() {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  span {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: $md-screen) {
+  .purple-btn {
+    max-width: 240px;
+  }
+
+  .heading {
+    font-size: 7rem;
+  }
+
+  .section {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+}

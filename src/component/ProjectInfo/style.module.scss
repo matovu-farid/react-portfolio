@@ -1,0 +1,99 @@
+@import '../../scss/variables.scss';
+@import '../../scss/globals.scss';
+
+.popup {
+  flex-direction: column;
+  position: absolute;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.content {
+  background-color: white;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.close {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 2em;
+}
+
+.tag {
+  background: transparent;
+  border: 1px solid;
+  font-size: $tag;
+  padding: 0.2em 0.5em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.button {
+  @include alignBtn;
+
+  border: 1px solid;
+  padding: 1em;
+  font-size: $md;
+  background: transparent;
+  justify-content: space-around;
+  margin: 1em;
+  width: 80%;
+
+  &:hover {
+    background-color: $purple;
+    color: $white;
+  }
+}
+
+.title {
+  font-weight: 800;
+  font-style: $lg;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5em;
+}
+
+@media (min-width: $md-screen) {
+  .title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .info {
+    @include center-mixin();
+
+    & > div {
+      @include column-mixin();
+
+      max-width: 600px;
+      width: 100%;
+      align-items: flex-start;
+    }
+  }
+
+  .buttons {
+    flex-direction: row;
+    margin: 0;
+    gap: 1em;
+  }
+
+  .button {
+    width: 12em;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.5em 1em;
+  }
+}

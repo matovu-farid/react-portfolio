@@ -1,0 +1,31 @@
+@import '../../../scss/variables.scss';
+
+.project {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: $purple;
+  color: $white;
+
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+.tags {
+  display: flex;
+  gap: 0.5em;
+
+  li {
+    background-color: $light-blue;
+    color: $purple;
+    padding: 0.5em 1em;
+  }
+}
+
+.button {
+  color: $white;
+  font-size: $lg;
+}

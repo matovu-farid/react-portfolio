@@ -1,0 +1,15 @@
+@import '../../scss/variables.scss';
+
+.back {
+  position: fixed;
+  margin: 0.4em;
+  top: 0;
+  left: 0;
+  font-size: $lg;
+}
+
+@media (min-width: $md-screen) {
+  .back {
+    font-size: $xl;
+  }
+}

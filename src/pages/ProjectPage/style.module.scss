@@ -1,0 +1,22 @@
+@import '../../scss/variables.scss';
+@import '../../scss/globals.scss';
+
+.navlist {
+  display: none;
+
+  ul {
+    margin: 0;
+    padding: 1em 0;
+    gap: 2em;
+  }
+}
+
+@media (min-width: $md-screen) {
+  .page {
+    @include center-mixin();
+  }
+
+  .navlist {
+    display: flex;
+  }
+}
