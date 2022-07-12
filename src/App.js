@@ -18,7 +18,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
-      <Route path="/projects/:id" element={<ProjectPage />} />
+      <Route path="/projects" element={<ProjectPage />} />
+      <Route path="/contacts" element={<ProjectPage />} />
+      <Route path="/about" element={<ProjectPage />} />
     </Routes>
   );
 }

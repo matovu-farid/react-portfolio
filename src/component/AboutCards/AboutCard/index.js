@@ -6,7 +6,7 @@ import style from './style.module.scss';
 const AboutCard = ({
   list, color, image, title,
 }) => (
-  <div className={`content ${style.card}`}>
+  <div className={`content ${style.card} hover:scale-110 transition`}>
     <div
       className={style['about-item']}
       style={{

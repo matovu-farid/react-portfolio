@@ -1,3 +1,4 @@
+import Animate from '../../component/Animate';
 import Contact from '../../component/Contact';
 import Footer from '../../component/Footer';
 import Hero from '../../component/Hero';
@@ -8,14 +9,6 @@ import usePopup from '../../Hooks/usePopup';
 import AboutSection from '../AboutSection';
 import style from './style.module.scss';
 
-const Animate = ({ children }) => (
-  <div data-aos="fade" data-aos-easing="ease-in-sine">
-    {
-
-     children
-    }
-  </div>
-);
 const Homepage = () => {
   const {
     display, seeMore, close,

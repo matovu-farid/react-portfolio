@@ -10,7 +10,7 @@ const Hero = ({ showMenu }) => (
         <div className={style.menu}>
           <GiHamburgerMenu onClick={showMenu} />
         </div>
-        <div className="flex flex-col justify-center align-middle w-96 h-full">
+        <div className="flex flex-col justify-center align-middle w-96 h-screen">
           <TypeAnimation
             className="heading lg:text-8xl"
             cursor={false}
