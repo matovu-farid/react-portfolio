@@ -3,9 +3,9 @@ import propTypes from 'prop-types';
 import style from './style.module.scss';
 
 const Hero = ({ showMenu }) => (
-  <section className={`${style.section} section`}>
+  <section className={`${style.section} section md:relative md:top-20`}>
 
-    <div id="hero" className={style.hero}>
+    <div id="hero" className={`${style.hero} `}>
       <div className={`content ${style.content}`}>
 
         <div className={style.menu}>
@@ -22,7 +22,6 @@ const Hero = ({ showMenu }) => (
         </div>
 
       </div>
-      {/* <div className={style.divider} /> */}
     </div>
   </section>
 );
