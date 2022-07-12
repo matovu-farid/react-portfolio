@@ -15,6 +15,9 @@ const Navlist = ({ close }) => {
         <button className="text-button" onClick={() => navigateTo('#about')} type="button">About</button>
       </li>
       <li>
+        <button className="text-button" onClick={() => navigateTo('#projects')} type="button">Projects</button>
+      </li>
+      <li>
         <button className="text-button" onClick={() => navigateTo('#contact')} type="button">Contact</button>
       </li>
     </ul>

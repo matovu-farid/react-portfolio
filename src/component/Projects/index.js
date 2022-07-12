@@ -21,9 +21,12 @@ const MyCarousal = ({ data }) => (
 const Projects = () => {
   const data = useSelector((state) => state.project);
   return (
-    <div id="projects" className="md:h-screen">
-      <MyCarousal data={data} />
-    </div>
+    <section id="projects" className="md:h-screen flex flex-col align-middle justify-center">
+      <div className="">
+
+        <MyCarousal data={data} />
+      </div>
+    </section>
   );
 };
 
