@@ -1,5 +1,4 @@
 import propTypes from 'prop-types';
-import style from './style.module.scss';
 
 const Navlist = ({ close }) => {
   const navigateTo = (url) => {
@@ -7,12 +6,10 @@ const Navlist = ({ close }) => {
     close();
   };
   return (
-    <ul className={style.list}>
+    <ul className="md:fixed z-10 bg-white w-full flex flex-col md:flex-row align-middle md:justify-center text-xl md:text-3xl min-h-screen md:min-h-0">
+
       <li>
         <button className="text-button" onClick={() => navigateTo('#hero')} type="button">Hello</button>
-      </li>
-      <li>
-        <button className="text-button" onClick={() => navigateTo('#projects')} type="button">Portfolio</button>
       </li>
       <li>
         <button className="text-button" onClick={() => navigateTo('#about')} type="button">About</button>

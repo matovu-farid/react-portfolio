@@ -18,6 +18,7 @@
   opacity: 0.7;
 }
 
+
 .button {
   @include alignBtn;
 
@@ -38,4 +39,10 @@
 .links > * {
   flex: 1;
   font-size: $lg;
+}
+
+@media only screen and (min-width: 800px) {
+  .backdrop {
+    display: none
+  }
 }

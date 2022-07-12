@@ -3,15 +3,13 @@ import style from './style.module.scss';
 import '../../scss/globals.scss';
 
 const About = () => (
-  <div className="">
+  <div className="p-4">
     <h2 className="heading">About</h2>
 
-    <p>
-
-      I am  full-stack software engineer
-      who specialises in using Flutter, Firebase and
-      JavaScript to build software solutions for businesses.
-      Look below and swipe to see some of my projects
+    <p className="p-1">
+      I am full-stack software engineer who specialises in using Flutter,
+      Firebase and JavaScript to build software solutions for businesses. Look
+      below and swipe to see some of my projects
     </p>
 
     <a
@@ -21,7 +19,9 @@ const About = () => (
       download
     >
       <span>Get my CV</span>
-      <span><BiDownload /></span>
+      <span>
+        <BiDownload />
+      </span>
     </a>
   </div>
 );

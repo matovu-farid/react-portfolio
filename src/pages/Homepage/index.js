@@ -1,4 +1,3 @@
-import Backdrop from '../../component/Backdrop';
 import Contact from '../../component/Contact';
 import Footer from '../../component/Footer';
 import Hero from '../../component/Hero';
@@ -19,7 +18,7 @@ const Animate = ({ children }) => (
 );
 const Homepage = () => {
   const {
-    display, seeMore, close, modal,
+    display, seeMore, close,
   } = usePopup();
   return (
     <div>
@@ -27,7 +26,6 @@ const Homepage = () => {
 
         <Navlist close={() => {}} />
       </div>
-      <Backdrop display={display} mystyle={modal} />
       <Menu display={display} close={close} />
       <Animate>
 
