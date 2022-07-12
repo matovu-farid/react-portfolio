@@ -4,13 +4,13 @@ import TypeAnimation from 'react-type-animation';
 import style from './style.module.scss';
 
 const Hero = ({ showMenu }) => (
-  <section className={`${style.section} section md:relative md:top-20`}>
+  <section className={`${style.section} section h-4/5 md:h-screen md:relative md:top-20`}>
     <div id="hero" className={`${style.hero} `}>
       <div className={`content ${style.content}`}>
         <div className={style.menu}>
           <GiHamburgerMenu onClick={showMenu} />
         </div>
-        <div className="flex flex-col justify-center align-middle w-96">
+        <div className="flex flex-col justify-center align-middle w-96 h-full">
           <TypeAnimation
             className="heading lg:text-8xl"
             cursor={false}

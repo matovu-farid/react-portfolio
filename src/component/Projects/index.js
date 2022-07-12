@@ -10,12 +10,10 @@ const MyCarousal = ({ data }) => (
       infiniteLoop
       autoPlay
       className="w-full md:w-4/5 bg-slate-800 text-white mx-auto  rounded-2xl"
-
     >
-
-      {
-          data.map((item) => <Project key={item.name} item={item} />)
-            }
+      {data.map((item) => (
+        <Project key={item.name} item={item} />
+      ))}
     </Carousel>
   </div>
 );
@@ -23,9 +21,9 @@ const MyCarousal = ({ data }) => (
 const Projects = () => {
   const data = useSelector((state) => state.project);
   return (
-    <MyCarousal
-      data={data}
-    />
+    <div id="projects" className="md:h-screen">
+      <MyCarousal data={data} />
+    </div>
   );
 };
 
