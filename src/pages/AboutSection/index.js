@@ -3,9 +3,9 @@ import AboutCards from '../../component/AboutCards';
 import style from './style.module.scss';
 
 const AboutSection = () => (
-  <section className={`center-box ${style.section} section md:h-screen`}>
+  <section id="about" className={`center-box ${style.section} section md:h-screen`}>
 
-    <div className={style.about} id="about">
+    <div className={style.about}>
       <About />
       <AboutCards />
     </div>
