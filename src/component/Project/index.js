@@ -5,7 +5,7 @@ function Project({ item }) {
   const [loaded, setLoaded] = useState(false);
   const imageStyle = (loaded) => (loaded ? 'w-full h-full object-fill ' : 'hidden');
   return (
-    <div className="container mx-auto p-16">
+    <div className="container mx-auto md:p-16">
       <div className="flex gap-2 flex-col md:flex-row">
         <div className="w-full h-56 md:h-96">
           {
