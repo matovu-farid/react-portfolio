@@ -1,3 +1,4 @@
+import { GiHamburgerMenu } from 'react-icons/gi';
 import Animate from '../../component/Animate';
 import Contact from '../../component/Contact';
 import Footer from '../../component/Footer';
@@ -20,6 +21,9 @@ const Homepage = () => {
         <Navlist close={() => {}} />
       </div>
       <Menu display={display} close={close} />
+      <div className="text-5xl fixed right-0 top-0 p-5">
+        <GiHamburgerMenu onClick={seeMore} />
+      </div>
       <Animate>
 
         <Hero showMenu={seeMore} />
