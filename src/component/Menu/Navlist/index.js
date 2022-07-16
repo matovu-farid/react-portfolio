@@ -16,7 +16,7 @@ const Navlist = ({ close }) => {
 
           <li key={link} className="hover:border-b-2 border-gray-900 p-3 active:bg-blend-darken  w-full md:w-14">
             <button
-              className="text-button md:text-blue-500"
+              className="text-button md:text-blue-500 w-full"
               onClick={() => navigateTo(`#${link}`)}
               type="button"
             >
