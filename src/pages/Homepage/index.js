@@ -30,7 +30,7 @@ const Homepage = () => {
       }
       {
          isMenuShown || (
-         <div className="text-4xl text-pink-500 mix-blend-difference fixed z-40 right-0 top-0 p-5">
+         <div className="text-4xl text-pink-500 md:hidden mix-blend-difference fixed z-40 right-0 top-0 p-5">
            <GiHamburgerMenu onClick={openMenu} />
          </div>
          )
