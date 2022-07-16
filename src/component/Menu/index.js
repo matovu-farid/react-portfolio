@@ -5,7 +5,7 @@ import Navlist from './Navlist';
 
 const Menu = ({ display, close }) => (
   <>
-    <div style={{ display }} className={style.menu}>
+    <div style={{ display }} className={`${style.menu} fixed`}>
       <div className="content">
 
         <div className="close">
