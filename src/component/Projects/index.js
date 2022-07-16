@@ -36,7 +36,7 @@ const MyCarousal = ({ data }) => {
             src={item.image}
           />
         ))}
-        className="w-full md:w-4/5 text-white bg-gray-800 mx-auto  rounded-2xl overflow-hidden"
+        className="w-full md:w-4/5 text-white bg-gray-900 mx-auto  rounded-2xl overflow-hidden"
       >
         {data.map((item) => (
           <Project key={item.name} item={item} />
