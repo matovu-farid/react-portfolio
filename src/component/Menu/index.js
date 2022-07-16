@@ -3,12 +3,12 @@ import propTypes from 'prop-types';
 import style from './style.module.scss';
 import Navlist from './Navlist';
 
-const Menu = ({ display, close }) => (
+const Menu = ({ close }) => (
   <>
-    <div style={{ display }} className={`${style.menu} fixed`}>
+    <div className={`${style.menu} flex fixed`}>
       <div className="content">
 
-        <div className="close">
+        <div className="close z-10">
           <GrClose onClick={close} />
         </div>
         <Navlist close={close} />
@@ -19,7 +19,6 @@ const Menu = ({ display, close }) => (
 );
 
 Menu.propTypes = {
-  display: propTypes.string.isRequired,
   close: propTypes.func.isRequired,
 };
 

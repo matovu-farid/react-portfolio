@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Animate from '../../component/Animate';
 import Contact from '../../component/Contact';
@@ -6,27 +7,38 @@ import Hero from '../../component/Hero';
 import Menu from '../../component/Menu';
 import Navlist from '../../component/Menu/Navlist';
 import Projects from '../../component/Projects';
-import usePopup from '../../Hooks/usePopup';
 import AboutSection from '../AboutSection';
 import style from './style.module.scss';
 
 const Homepage = () => {
-  const {
-    display, seeMore, close,
-  } = usePopup();
+  const [isMenuShown, setIsMenuShown] = useState(false);
+  const openMenu = () => {
+    setIsMenuShown(true);
+  };
+  const close = () => {
+    setIsMenuShown(false);
+  };
+
   return (
     <div>
       <div className={`${style.navlist} center`}>
 
         <Navlist close={() => {}} />
       </div>
-      <Menu display={display} close={close} />
-      <div className="text-4xl fixed right-0 top-0 p-5">
-        <GiHamburgerMenu onClick={seeMore} />
-      </div>
+      {
+        isMenuShown && <Menu close={close} />
+      }
+      {
+         isMenuShown || (
+         <div className="text-4xl text-pink-500 mix-blend-difference fixed z-40 right-0 top-0 p-5">
+           <GiHamburgerMenu onClick={openMenu} />
+         </div>
+         )
+      }
+
       <Animate>
 
-        <Hero showMenu={seeMore} />
+        <Hero />
       </Animate>
       <Animate>
 
