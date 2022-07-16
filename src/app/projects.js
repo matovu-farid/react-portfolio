@@ -1,7 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import projects from './database';
 
-const initialState = [];
+const initialState = {
+  all: [],
+  loading: true,
+};
 const fetchProjects = createAsyncThunk(
   'projects',
   async () => {
@@ -15,7 +18,8 @@ export const projectSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder.addCase(fetchProjects.fulfilled, (state, action) => {
-      state.push(...action.payload);
+      state.all.push(...action.payload);
+      state.loading = false;
     });
   },
 

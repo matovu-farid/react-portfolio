@@ -3,7 +3,7 @@ import projectReducer from './projects';
 
 export const store = configureStore({
   reducer: {
-    project: projectReducer,
+    projects: projectReducer,
   },
 });
 
