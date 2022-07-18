@@ -21,7 +21,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <div className={`${style.navlist} center`}>
+      <div className={`${style.navlist} center md:flex`}>
 
         <Navlist close={() => {}} />
       </div>
