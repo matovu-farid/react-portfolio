@@ -16,6 +16,7 @@ function App() {
     AOS.init();
   }, []);
   return (
+
     <Routes>
       <Route path="/" element={<Homepage />} />
       <Route path="/projects" element={<ProjectPage />} />
