@@ -28,9 +28,20 @@ function Project({ item }) {
 
           <div className="w-full flex flex-col justify-center ">
             <p>{item.description}</p>
-            <a href={item.github} target="_blank" className="mx-auto cursor-pointer bg-white  hover:bg-orange-400 text-gray-900 font-bold py-2 px-4 rounded inline-flex items-center" rel="noreferrer">
-              Github
-            </a>
+            <div className="flex flex-row gap-2 mx-auto">
+
+              <a href={item.github} target="_blank" className="cursor-pointer bg-white  hover:bg-orange-400 text-gray-900 font-bold py-2 px-4 rounded inline-flex items-center" rel="noreferrer">
+                Github
+              </a>
+              {
+
+              (item.live) && (
+                <a href={item.live} target="_blank" className="cursor-pointer bg-white  hover:bg-orange-400 text-gray-900 font-bold py-2 px-4 rounded inline-flex items-center" rel="noreferrer">
+                  Live
+                </a>
+              )
+              }
+            </div>
           </div>
         </div>
       </div>
